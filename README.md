@@ -1,6 +1,6 @@
 # EVM From Scratch
 
-![EVM From Scratch](.logo.png)
+![EVM From Scratch](logo.png)
 
 Welcome to Rajkumar's implementation of the Ethereum Virtual Machine in Rust.
 
