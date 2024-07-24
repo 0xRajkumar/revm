@@ -77,9 +77,6 @@ fn main() {
         //Because We don't have gas in test cases we will take uint256 max.
         let gas: U256 = U256::max_value();
 
-        //@note Let's implement Origin, From and to. If nothing is given.
-
-        //@note - Here
         let result = evm(&code, &mut state, test, calldata, gas);
 
         let mut expected_stack: Vec<U256> = Vec::new();
@@ -92,8 +89,6 @@ fn main() {
         let mut matching = result.stack.len() == expected_stack.len();
         if matching {
             for i in 0..result.stack.len() {
-                // We not it's good because our order it right but they are having bad order.
-                // if result.stack[i] != expected_stack[i] {
                 if result.stack[result.stack.len() - i - 1] != expected_stack[i] {
                     matching = false;
                     break;
